@@ -22,52 +22,31 @@ let h3Text = document.querySelector("#show-result");
 
 
 btnNumber.addEventListener("click", calculateNumber);
-inputNumber.addEventListener("click", inputKeyUp);
-
-function inputKeyUp(){
-return inputNumber.value
-}
 
 
-function calculateNumber(num1, num2){
-    num1 = parseInt(num1);
-    num2 = parseInt(num2);
-    let sum = num1 + num2;
-    let win;
+function calculateNumber(){
+    let random = getRandomInt(1, 6);
+    let user = parseInt(inputNumber.value);
+    let sum = random + user;
     if(sum % 2 === 0){
-       if(select.value !== "pari"){
-          return win = false;
-       } else{
-           return win = true;
-       }
-    }
-    if(sum % 2 !== 0){
-        if(select.value === "pari"){
-            return win = false;
-         } else{
-             return win = true;
-         }
-    }
+        if(select.value !== "pari"){
+            h3Text.innerHTML = "hai perso";
+        } else{
+            h3Text.innerHTML = "hai vinto";
+        }
+     }
+     if(sum % 2 !== 0){
+         if(select.value === "pari"){
+            h3Text.innerHTML = "hai perso";
+          } else{
+            h3Text.innerHTML = "hai vinto";
+          }
+     }
 }
 
-let inputKey = inputKeyUp()
-let random = getRandomInt(1 , 6);
-let winner = calculateNumber(inputKey, random)
-console.log("input",inputKey)
-console.log("random",random)
-console.log("Hai vinto?", winner)
-
-
-function drowwinner(bool){
-if(bool){
-    h3Text.innerHTML = "hai vinto"
-} else {
-    h3Text.innerHTML = "hai perso"
-}
-}
-drowwinner(winner)
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
+  getRandomInt(1, 6)
 
