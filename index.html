@@ -3,41 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <section>
-        <div>
+<body class="vh-100 vw-100">
+    <section class="bg-info h-50 d-flex justify-content-center align-items-center flex-column">
+        <div class="mt-2 pb-4 W-100">
             <div>
-                <input type="text" name="parola" id="input-text">
-                <button type="button" id="btn-text">Verifica</button>
+                <form>
+                    <div class="mb-3">
+                      <h3 class="fs-1 text fw-bold mb-4">Palindromo? Scoprilo!</h3>
+                      <input type="text" class="form-control d-inline w-75" id="input-text" aria-describedby="emailHelp">
+                      <button type="button" class="btn btn-dark align-baseline" id="btn-text">Valida</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div>
+        <div> 
             <div>
-                <h3 id="show-result"></h3>
+                <p id="palindrome-result" class="text-light">Qui il risultato...</p>
             </div>
         </div>
     </section>
-    <section>
-        <div>
+    <section class="bg-dark h-50 d-flex justify-content-center align-items-center flex-column">
+        <div class="mb-4">
             <div>
-                <input type="number" name="number" id="input-number" min="0" max="5">
+                <div>
+                    <h3 class="fs-1 text text-white fw-bold mb-4">Pari o dispari? Scegli!</h3>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" name="number" class="form-control w-100" id="input-number">
+                </div>
             </div>
-            <div>
-                <select name="select" id="select">
-                    <option value="pari">Pari</option>
-                    <option value="dispari">Dispari</option>
-                </select>
-            </div>
-            <div>
-                <button type="button" name="button-number" id="btn-number">Trova</button>
+            <div class="d-flex">
+                <div class="mb-3 me-1 w-100">
+                    <select class="form-select" aria-label="Default select example" name="select" id="select">
+                        <option value="pari">Pari</option>
+                        <option value="dispari">Dispari</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-info" id="btn-number" name="button-number">Valida</button>
+                </div>
             </div>
         </div>
         <div>
             <div>
-                <h3 id="show-result"></h3>
+                <p id="show-result" class="text-white">Qui il risultato...</p>
             </div>
         </div>
     </section>

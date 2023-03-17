@@ -23,18 +23,22 @@ function calculateNumber(){
     let sum = random + user;
     if(sum % 2 === 0){
         if(select.value !== "pari"){
-            h3Text.innerHTML = "hai perso";
+            h3Text.innerHTML = "Hai perso";
         } else{
-            h3Text.innerHTML = "hai vinto";
+            h3Text.innerHTML = "Hai vinto!";
         }
-     }
-     if(sum % 2 !== 0){
+     } else if(sum % 2 !== 0){
          if(select.value === "pari"){
-            h3Text.innerHTML = "hai perso";
+            h3Text.innerHTML = "Hai perso";
           } else{
-            h3Text.innerHTML = "hai vinto";
+            h3Text.innerHTML = "Hai vinto!";
           }
      }
+     console.log("Numero computer:", random);
+     console.log("Numero user:",user);
+     console.log("Somma:",sum);
+     console.log("La tua scelta:",select.value);
+     console.log("Risultato:", h3Text.innerHTML);
 }
 
 
